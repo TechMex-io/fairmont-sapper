@@ -1,0 +1,92 @@
+<svelte:head>
+  <title>{page.title}</title>
+</svelte:head>
+
+<section class="pt-8 mt-8 purchase">
+    <div class="container sm:w-4/5 mx-auto">
+      <h2 class="text-center uppercase text-4xl mb-4 mt-8 border-after border-after-center">Units For Lease</h2>
+    </div>
+</section>
+
+{#if page.properties.length > 0}
+  {#each page.properties as prop}
+    <section class="py-8 mt-8 purchase">
+      <div class="container sm:w-4/5 mx-auto">
+        <div class="md:flex justify-center content-center flex-wrap">
+          <div class="leading-normal font-light md:w-1/2 md:pl-24 px-8 mb-4">
+              <h3>{prop.unit_number}</h3>
+              <h3>{prop.unit_bedbath}</h3>
+              <h3>{prop.unit_sqft}</h3>
+              <h3>{prop.unit_rent}</h3>
+              {#if prop.unit_extrainfo}
+                {#each prop.unit_extrainfo as i}
+                <h3>{i}</h3>
+                {/each}
+              {/if}
+          </div>
+          <div class="leading-normal font-light md:w-1/2 px-8">
+            <p class="mb-4">
+              The Fairmont Condominium Association
+              <br>
+              1800 N. Stanton
+              <br>
+              El Paso, TX  79902
+            </p>
+
+            <p>
+              Leases managed by FPM Management, L.L.C.
+              <br>
+              1800 N. Stanton
+              <br>
+              El Paso, TX  79902
+              <br>
+              <a href="mailto:office.fairmont1800@gmail.com" class="button button-black mt-4 inline-block">Request an Appointment</a>
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    
+    {#if prop.unit_images}
+      <section class="my-4 amenities">
+        <div class="container mx-auto px-8">
+    
+          <div class="sm:flex flex-wrap">
+            {#each prop.unit_images as img}
+            <div class="sm:w-1/2 sm:pr-4 mb-8">
+              <img src="/img/{img}" alt="" class="shadow-lg rounded" srcset="">
+            </div>
+            {/each}
+          </div>
+        </div>
+      </section>
+    {/if}
+  {/each}
+{/if}
+
+
+
+  <Comfort />
+
+<script>
+  import { pages } from "./_page-data.js";
+
+  const pager = pages.filter(p => p.id === 2)[0];
+
+  export default {
+    components: {
+      Comfort: '../components/Comfort.html',
+    },
+    data() {
+      return {
+        pager
+      };
+    },
+    computed: {
+      page: ({$pages}) => {
+        return $pages.filter(page => page.name === 'leasing')[0];
+      },
+    },
+  };
+</script>

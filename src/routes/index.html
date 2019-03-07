@@ -1,0 +1,104 @@
+<svelte:head>
+  <title>{homePage.title}, El Paso, TX</title>
+</svelte:head>
+
+<header
+  class="h-screen content-center flex-wrap relative bg-center bg-fixed bg-cover bg-no-repeat flex content-center flex-wrap bg-grey-lighter h-48 site-header"
+  @click="handleScroll()"
+>
+  <div class="absolute pin bg-orange-fairmont opacity-50 overlay"></div>
+  <div class="relative container mx-auto px-6">
+    <div class="md:w-1/2 h-auto text-white text-shadow-all hero-text">
+      <div class="relative h-auto">
+        <h1 class="text-4xl md:text-6xl leading-tight">{homePage.title}</h1>
+        <h2 class="uppercase font-normal font-sans opacity-75 my-4">
+          El Paso, Texas
+        </h2>
+        <h3 class="font-normal font-sans leading-normal mb-8">
+          Located in El Paso's Westside Rim Area Neighborhood on the corner of
+          Rim and Stanton
+        </h3>
+        <a href="#about" class="button button-white">Learn More</a>
+      </div>
+    </div>
+  </div>
+  <div class="w-full"></div>
+</header>
+
+<section id="about" class="mb-24 py-32 about">
+  <div class="container sm:w-4/5 mx-auto">
+    <h2
+      class="text-center uppercase text-4xl mb-4 mt-8 border-after border-after-center"
+    >
+      About the Fairmont
+    </h2>
+    <div class="md:flex justify-center content-center flex-wrap">
+      <p class="leading-normal font-light md:w-1/2 px-8 mb-8">
+        {homePage.intro1}
+      </p>
+      <p class="leading-normal font-light md:w-1/2 px-8">
+        {homePage.intro2}
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="my-8 py-8 amenities">
+    <div class="container mx-auto px-8">
+
+      <div class="sm:flex py-8 mb-24">
+        <div class="sm:w-1/2 mb-8">
+          <img src="img/{homePage.img_fairmont}" alt="" class="shadow-lg rounded" srcset="">
+        </div>
+        <div class="sm:w-1/2 sm:pl-8">
+          {@html homePage.living}
+        </div>
+      </div>
+      
+      <div class="sm:flex py-8 my-24">
+        <div class="sm:w-1/2 sm:pr-8 mb-8">
+          {@html homePage.community}
+        </div>
+        <div class="sm:w-1/2">
+          <img src="/img/{homePage.img_pool}" alt="" class="shadow-lg rounded" srcset="">
+        </div>
+      </div>
+      
+      
+      
+      <div class="sm:flex py-8 my-24">
+        <div class="sm:w-1/2 mb-8">
+          <img src="/img/{homePage.img_fairmont}" alt="" class="shadow-lg rounded" srcset="">
+        </div>
+        <div class="sm:w-1/2 sm:pl-8">
+          {@html homePage.security}
+        </div>
+      </div>
+
+    </div>
+</section>
+
+<Comfort />
+
+
+
+<script>
+
+  export default {
+    components: {
+      Comfort: '../components/Comfort.html',
+    },
+    data() {
+      return {
+        pages: {}
+      }
+    },
+    computed: {
+      homePage: ({$pages}) => {
+        return $pages.filter(page => page.name === 'home')[0];
+      },
+    },
+  }
+</script>
+
+<style></style>
