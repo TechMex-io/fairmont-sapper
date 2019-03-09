@@ -81,7 +81,8 @@ export const pages = [
         unit_rent: 'Monthly Rent - $1600.00',
         unit_extrainfo: [
           'Electricity and Cable paid by tenant',
-          'By appointment only.'
+          'By appointment only.',
+          'Also available for sale',
         ],
         unit_images: [
           'Unit607-1.jpg',
@@ -126,6 +127,34 @@ export const pages = [
           'Unit501-32.JPG',
         ]
       },
+      {
+        unit_number: 'Unit #306',
+        unit_bedbath: '2 Bedroom/2 Bath',
+        unit_sqft: '1,123.51 square feet',
+        unit_rent: 'Monthly Rent - $1750.00',
+        unit_extrainfo: [
+          'By appointment only.',
+          'Also available for sale'
+        ],
+        unit_images: [
+          '306-1.jpg',
+          '306-2.jpg',
+          '306-3.jpg',
+          '306-4.jpg',
+          '306-5.jpg',
+          '306-6.jpg',
+          '306-7.jpg',
+          '306-8.jpg',
+          '306-9.jpg',
+          '306-10.jpg',
+          '306-11.jpg',
+          '306-12.jpg',
+          '306-13.jpg',
+          '306-14.jpg',
+          '306-15.jpg',
+          '306-16.jpg',
+        ]
+      },
     ]
   },
   {
@@ -136,13 +165,43 @@ export const pages = [
     images: [],
     properties: [
       {
+        unit_title: 'Unit #306 for Sale',
+        unit_number: 'Unit #306',
+        unit_bedbath: '2 Bedroom/2 Bath',
+        unit_sqft: '1,123.51 square feet',
+        unit_rent: 'For Sale - $145,000',
+        unit_extrainfo: [
+          'By appointment only.',
+          'HOA Fee - $559.16',
+        ],
+        unit_images: [
+          '306-1.jpg',
+          '306-2.jpg',
+          '306-3.jpg',
+          '306-4.jpg',
+          '306-5.jpg',
+          '306-6.jpg',
+          '306-7.jpg',
+          '306-8.jpg',
+          '306-9.jpg',
+          '306-10.jpg',
+          '306-11.jpg',
+          '306-12.jpg',
+          '306-13.jpg',
+          '306-14.jpg',
+          '306-15.jpg',
+          '306-16.jpg',
+        ]
+      },
+      {
         unit_title: 'Unit #308 for Sale',
         unit_number: 'Unit #308',
         unit_bedbath: '2 Bedroom/2 Bath',
         unit_sqft: '1,152.88 square feet',
-        unit_rent: 'Monthly HOA Fee - $525.76',
+        unit_rent: 'For Sale - $190,000',
         unit_extrainfo: [
-          'By appointment only.'
+          'By appointment only.',
+          'Monthly HOA Fee - $525.76',
         ],
         unit_images: [
           '308-1.jpg',
@@ -158,6 +217,75 @@ export const pages = [
           '308-11.jpg',
           '308-12.jpg',
           '308-13.jpg',
+        ]
+      },
+      {
+        unit_title: 'Unit #607 for Sale',
+        unit_number: 'Unit #607',
+        unit_bedbath: '2 Bedroom/2 Bath',
+        unit_sqft: '1,144.07 square feet',
+        unit_rent: 'For Sale - $180,000',
+        unit_extrainfo: [
+          'By appointment only.',
+          'Monthly HOA Fee - $521.78',
+        ],
+        unit_images: [
+          '308-1.jpg',
+          '308-2.jpg',
+          '308-3.jpg',
+          '308-4.jpg',
+          '308-5.jpg',
+          '308-6.jpg',
+          '308-7.jpg',
+          '308-8.jpg',
+          '308-9.jpg',
+          '308-10.jpg',
+          '308-11.jpg',
+          '308-12.jpg',
+          '308-13.jpg',
+        ]
+      },
+    ],
+  },
+  {
+    id: 4,
+    name: 'corporate',
+    title: 'Fairmont Corporate Units for Lease',
+    content: 'corporate content',
+    images: [],
+    properties: [
+      {
+        unit_title: 'Unit #1004 for Lease',
+        unit_number: 'Unit #1004',
+        unit_bedbath: '2 Bedroom/2 Bath',
+        unit_sqft: '1,134.37 square feet',
+        unit_rent: '$2,850/mo',
+        unit_extrainfo: [
+          'By appointment only.'
+        ],
+        unit_corp_info: `Our top of the line two bedroom two bath Corporate Condominium is $2,850 per month with a three month minimum.  Monthly rental rates include all utilities and services, including electric, gas, water, cable TV, high speed Internet with wireless and weekly maid service. Fine linens and towels are provided and laundered with weekly housekeeping.
+        <br><br>This Corporate is on par with luxury penthouse hotel suites with a full length balcony and spectacular views, refrigerated air conditioning, covered parking and are nonsmoking.  Pets are not allowed. Prices are all inclusive with no additional taxes or fees or charges.
+        <br><br>You can contact us at (915) 577-9186 or my cell at (915)204-9505 or e-mail at <a class="text-orange-fairmont" href="mailto:bob@camelotcorporates.com">bob@camelotcorporates.com</a>.`,
+        unit_images: [
+          '1004-1.jpg',
+          '1004-2.jpg',
+          '1004-3.jpg',
+          '1004-4.jpg',
+          '1004-5.jpg',
+          '1004-6.jpg',
+          '1004-7.jpg',
+          '1004-8.jpg',
+          '1004-9.jpg',
+          '1004-10.jpg',
+          '1004-11.jpg',
+          '1004-12.jpg',
+          '1004-13.jpg',
+          '1004-14.jpg',
+          '1004-15.jpg',
+          '1004-16.jpg',
+          '1004-17.jpg',
+          '1004-18.jpg',
+          '1004-19.jpg',
         ]
       },
     ],
