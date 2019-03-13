@@ -260,7 +260,7 @@ export const pages = [
         unit_number: 'Unit #1004',
         unit_bedbath: '2 Bedroom/2 Bath',
         unit_sqft: '1,134.37 square feet',
-        unit_rent: '$2,850/mo',
+        unit_rent: '$2,890/mo',
         unit_extrainfo: [
           'By appointment only.'
         ],
